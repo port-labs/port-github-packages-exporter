@@ -1,0 +1,9 @@
+# Dependency directories
+node_modules/
+**/node_modules/**
+
+# WebStorm
+.idea
+
+# MacOS system files
+.DS_Store

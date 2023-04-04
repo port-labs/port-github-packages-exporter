@@ -1,0 +1,14 @@
+{
+  "name": "port-github-packages-exporter",
+  "version": "1.0.0",
+  "description": "Export GitHub packages to Port",
+  "main": "index.js",
+  "type": "module",
+  "keywords": [],
+  "author": "Port.io",
+  "license": "ISC",
+  "dependencies": {
+    "@octokit/rest": "^19.0.7",
+    "axios": "^1.3.4"
+  }
+}

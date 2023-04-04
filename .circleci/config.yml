@@ -1,0 +1,21 @@
+version: 2.1
+jobs:
+  export-github-packages-to-port:
+    docker:
+      - image: cimg/node:19.8.1
+    steps:
+      - checkout
+      - run: npm install
+      - run:
+          name: "Export GitHub Packages to Port"
+          command: GITHUB_ORG=${CIRCLE_PROJECT_USERNAME} node src/index.js
+          environment:
+            PORT_API_URL: https://api.getport.io
+            PORT_GITHUB_PACKAGES_BLUEPRINT: package
+
+workflows:
+  main:
+    jobs:
+      - export-github-packages-to-port:
+          context:
+            - github-port
